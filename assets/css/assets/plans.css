@@ -18,9 +18,10 @@
 }
 
 .card-container {
+    padding: 5px;
     aspect-ratio: 1.586 / 1; /* نسبت طلایی برای کارت */
     width: 100%;
-    background: linear-gradient(to bottom right, #e0e0e0, #cfcfcf);
+    background: linear-gradient(to bottom right, #ffffff, #ffffff);
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -29,7 +30,7 @@
 
 .shetab-ico {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 15px;
     width: 60px;
     height: 30px;
@@ -37,16 +38,13 @@
     border-radius: 4px;
 }
 
-.bank-img{
-    width: 70px;
-    height: 10px;
+.bank-div{
+    width: 15%;
 }
-.bank-icon {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 5px;
-    height: 3px;
-    background-color: #444;
+.bank-ico {
+    top:20px;
+    right: 25px;
+    width: 100%;
+    height: auto;
     border-radius: 4px;
 }
