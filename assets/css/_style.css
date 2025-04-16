@@ -15,34 +15,34 @@ body{
 /*  Vazir  */
 @font-face {
     font-family: Vazir Code;
-    src: url('/font/vazir/Vazir-Code.eot');
-    src: url('/font/vazir/Vazir-Code.eot?#iefix') format('embedded-opentype'),
-         url('/font/vazir/Vazir-Code.woff') format('woff'),
-         url('/font/vazir/Vazir-Code.ttf') format('truetype');
+    src: url('assets/font/vazir/Vazir-Code.eot');
+    src: url('assets/font/vazir/Vazir-Code.eot?#iefix') format('embedded-opentype'),
+         url('assets/font/vazir/Vazir-Code.woff') format('woff'),
+         url('assets/font/vazir/Vazir-Code.ttf') format('truetype');
     font-weight: normal;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: Vazir Code Hack;
-    src: url("/font/vazir/Vazir-Code-Hack.eot");
-    src: url("/font/vazir/Vazir-Code-Hack.eot?#iefix") format('embedded-opentype'),
-         url("/font/vazir/Vazir-Code-Hack.woff") format('woff'),
-         url("/font/vazir/Vazir-Code-Hack.ttf") format('truetype');
+    src: url("assets/font/vazir/Vazir-Code-Hack.eot");
+    src: url("assets/font/vazir/Vazir-Code-Hack.eot?#iefix") format('embedded-opentype'),
+         url("assets/font/vazir/Vazir-Code-Hack.woff") format('woff'),
+         url("assets/font/vazir/Vazir-Code-Hack.ttf") format('truetype');
     font-weight: normal;
-  }
+}
   /* Iran Sans */
-  @font-face {
+@font-face {
     font-family: iran Sans;
-    src: url("/font/iransans/IRANSans-web.woff");
+    src: url("assets/font/iransans/IRANSans-web.woff");
     font-weight: normal;
   }
   /* B nazanin */
   @font-face {
     font-family: B nazanin;
-    src: url("/font/bnazanin/BNazanin.woff2");
+    src: url("assets/font/bnazanin/BNazanin.woff2");
     font-weight:normal;
   }
   /* font assignment */
-  h6,h5,h4,h3,h2,h1{
-    font-family: 'Vazir Code','Vazir Code Hack',monospaced;
-  }
+h6,h5,h4,h3,h2,h1{
+    font-family: 'Vazir Code','Vazir Code Hack',monospace;
+}
