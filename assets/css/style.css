@@ -12,22 +12,24 @@
 body{
    font-family: 'Vazirmatn', sans-serif;
   }
-/*  Vazir  */
+/*  Vazir  Code*/
 @font-face {
-    font-family: Vazir Code;
-    src: url('assets/font/vazir/Vazir-Code.eot');
-    src: url('assets/font/vazir/Vazir-Code.eot?#iefix') format('embedded-opentype'),
-         url('assets/font/vazir/Vazir-Code.woff') format('woff'),
-         url('assets/font/vazir/Vazir-Code.ttf') format('truetype');
+    font-family: 'Vazir Code';
+    src: url('../font/vazir/Vazir-Code.eot');
+    src: url('../font/vazir/Vazir-Code.eot?#iefix') format('embedded-opentype'),
+    url('../font/vazir/Vazir-Code.woff2') format('woff2'),
+    url('../font/vazir/Vazir-Code.woff') format('woff'),
+    url('../font/vazir/Vazir-Code.ttf') format('truetype');
     font-weight: normal;
 }
-  
+
 @font-face {
-    font-family: Vazir Code Hack;
-    src: url("assets/font/vazir/Vazir-Code-Hack.eot");
-    src: url("assets/font/vazir/Vazir-Code-Hack.eot?#iefix") format('embedded-opentype'),
-         url("assets/font/vazir/Vazir-Code-Hack.woff") format('woff'),
-         url("assets/font/vazir/Vazir-Code-Hack.ttf") format('truetype');
+    font-family: 'Vazir Code Hack';
+    src: url('../font/vazir/Vazir-Code-Hack.eot');
+    src: url('../font/vazir/Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'),
+    url('../font/vazir/Vazir-Code-Hack.woff2') format('woff2'),
+    url('../font/vazir/Vazir-Code-Hack.woff') format('woff'),
+    url('../font/vazir/Vazir-Code-Hack.ttf') format('truetype');
     font-weight: normal;
 }
   /* Iran Sans */
