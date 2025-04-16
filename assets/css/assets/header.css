@@ -1,40 +1,37 @@
 
 
-.header-nav{
+.header-con {
     /*position: fixed;*/
-    background-color: #e01c7a;
+    background-color: #1ce0ac;
+    border-radius: 0 0 10px 10px;
 }
-.menu-options{
+
+.menu-options {
     font-size: 0.8rem;
 }
-.menu-options:active{
-    color: #ffffff;
-}
+
 .menu-options:nth-child(-n+3) {
     color: #ffffff;
-    text-shadow: 0 2px 5px #f8f6f6;
+    text-shadow: 0 2px 5px #ecd240;
     transition: transform 0.4s ease;
 }
+
 .menu-options:nth-child(-n+3):hover {
     cursor: pointer;
     transform: scale(1.2);
 }
-.menu-icon{
-    width: 5rem;
+
+.menu-icon {
+    width: 3rem;
     height: auto;
-    filter: drop-shadow(-2px 2px 7px #ffffff);
+    filter: drop-shadow(-5px 2px 10px #831fd4);
     overflow: hidden;
 }
 
-
- .nav-link.active {
-     font-weight: bold;
-     color: #0d6efd !important;
-     border-bottom: 2px solid #0d6efd;
- }
-
-body {
-    scroll-behavior: smooth;
-    padding-top: 60px; /* جبران navbar فیکس‌شده */
+.nav-link.active {
+    font-weight: bold;
+    color: #eb3cab !important;
+    border-bottom: 2px solid #c6d8f3;
 }
+
 

@@ -1,0 +1,48 @@
+/*⬇️ Here starts the container*/
+.section-1 {
+    border-radius: 15px 15px 0 0;
+}
+
+
+.h1-title {
+    font-family: 'lalezar', serif;
+    font-size: 32px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-image: url(../../img/background/title-gif/title.gif);
+    color: transparent;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
+.card-container {
+    aspect-ratio: 1.586 / 1; /* نسبت طلایی برای کارت */
+    width: 100%;
+    background: linear-gradient(to bottom right, #e0e0e0, #cfcfcf);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shetab {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 60px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+.bank-ico {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    height: 30px;
+    background-color: #444;
+    border-radius: 4px;
+}
