@@ -1,13 +1,46 @@
-.header-nav{
+.headd{
+    height: 50px;
+}
 
+.header-nav{
     /*position: fixed;*/
     margin: 0;
     padding: 0;
-    height: 7vh;
-    border-radius:0 0 5px 5px;
+    min-height:7vh;
+    border-radius:0 0 15px 15px;
+    background-color: #e01c7a;
 }
 .menu-options{
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
+.menu-options:nth-child(-n+3) {
+    color: #ffffff;
+    text-shadow: 0 2px 5px #000000;
+    transition: transform 0.4s ease;
+
+}
+.menu-options:nth-child(-n+3):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.menu-icon{
+    width: 5rem;
+    height: auto;
+    filter: drop-shadow(0px 0px 12px #ffffff);
+    overflow: hidden;
+}
+
+
+ .nav-link.active {
+     font-weight: bold;
+     color: #0d6efd !important;
+     border-bottom: 2px solid #0d6efd;
+ }
+
+body {
+    scroll-behavior: smooth;
+    padding-top: 60px; /* جبران navbar فیکس‌شده */
+}
+
