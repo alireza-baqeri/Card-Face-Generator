@@ -21,7 +21,7 @@
     padding: 5px;
     aspect-ratio: 1.586 / 1; /* نسبت طلایی برای کارت */
     width: 100%;
-    background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    background: linear-gradient(to bottom right, #fa57e1, #56d54a);
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -30,21 +30,44 @@
 
 .shetab-ico {
     position: absolute;
-    top: 15px;
+    top: 20px;
     left: 15px;
-    width: 60px;
-    height: 30px;
+    width: 65px;
+    height: 35px;
     background-color: #000;
     border-radius: 4px;
 }
 
-.bank-div{
-    width: 15%;
+.bank-div {
+    width: 20%;
 }
+
 .bank-ico {
-    top:20px;
-    right: 25px;
+    position: relative;
+    top: 0;
+    right: 15px;
     width: 100%;
     height: auto;
     border-radius: 4px;
+    filter: drop-shadow(3px 1px 10px rgba(10, 0, 2, 0.9));
+}
+
+.card-num {
+    width: 100%;
+    font-family: 'Vazir', serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.shaba-num {
+    width: 100%;
+    font-family: 'Vazir Code', serif;
+    font-size: 20px;
+    /*font-weight: bold;*/
+}
+
+.card-name {
+    font-family: 'iran Sans', serif;
+    font-size: 18px;
 }
