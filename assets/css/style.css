@@ -1,12 +1,12 @@
 /* CSS imports */
-@import url(/assets/css/assets/cssreset.css);
-@import url(/assets/css/assets/utility.css);
-@import url(/assets/css/assets/header.css);
-@import url(/assets/css/assets/menu.css);
-@import url(/assets/css/assets/plans.css);
-@import url(/assets/css/assets/footer.css);
-/*@import url(/assets/css/assets/_aboutus.css);*/
-/*@import url(/assets/css/assets/_faq.css);*/
+@import url(assets/cssreset.css);
+@import url(assets/utility.css);
+@import url(assets/header.css);
+@import url(assets/menu.css);
+@import url(assets/plans.css);
+@import url(assets/footer.css);
+/*@import url(/assets/css/assets/aboutus.css);*/
+/*@import url(/assets/css/assets/faq.css);*/
 /* vazir cdn */
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 body{
