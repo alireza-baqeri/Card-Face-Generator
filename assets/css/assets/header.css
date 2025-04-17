@@ -1,5 +1,4 @@
 
-
 .header-con {
     /*position: fixed;*/
     background-color: #1ce0ac;
@@ -35,3 +34,7 @@
 }
 
 
+.div-title-container {
+    background-color: #0d1d5e;
+    border-radius: 10px;
+}
