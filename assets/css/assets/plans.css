@@ -25,7 +25,7 @@
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .shetab-div {
@@ -38,7 +38,7 @@
     /*top: 0;*/
     /*right: 15px;*/
     border-radius: 4px;
-    filter: drop-shadow(3px 1px 10px rgba(10, 0, 2, 0.9));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 
 
     /*padding: 5px;*/
@@ -61,7 +61,7 @@
     /*width: 100%;*/
     /*height: auto;*/
     border-radius: 4px;
-    filter: drop-shadow(3px 1px 10px rgba(10, 0, 2, 0.9));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 
 /*⬇️card-number ui*/
@@ -83,4 +83,13 @@
 .card-name {
     font-family: 'iran Sans', serif;
     font-size: 18px;
+}
+
+
+.input-form {
+    background-color: #0d1d5e;
+    border-radius: 15px;
+    padding: 1rem;
+    border: 1px dashed #1ce0ac;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
