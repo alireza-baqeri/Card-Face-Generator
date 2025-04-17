@@ -53,7 +53,7 @@
 <div class="container body-container vh-100 px-0">
 
     <!--⬇️ First-sections starts here-->
-    <section id="section1" class="border section-1 h-100 px-3 pt-2">
+    <section id="section1" class=" section-1  px-3 pt-2">
         <!--        ⬇️⬆title-->
         <div class="row vh-10 d-flex justify-content-center">
             <div class=" text-center col-8 col-sm-7 col-md-6 col-lg-4">
@@ -70,7 +70,7 @@
             <div class="col-12 col-sm-12 col-md-8 col-lg-6">
                 <div class="card-container">
                     <!-- ⬇️the first row which contains Shetab Icon and Bank Icon-->
-                    <div class="row border d-flex  align-items-center h-25">
+                    <div class="row  d-flex  align-items-center h-25">
                         <div class="bank-div col-2 ms-auto">
                             <img class="bank-ico bank-icon-mquery" src="assets/img/banks-icons/maskan.png" alt="">
                         </div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="row h-25 ">
-                        <div class=" border ">
+                        <div class="  ">
                             <div dir="ltr" class="card-input d-flex justify-content-center align-items-end h-100">
                                 <div class="w-100 card-num text-center card-number-mquery" id="card-num">6104 2313 5532
                                     3113
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="row h-25">
-                        <div class="border">
+                        <div class="">
                             <div class="shaba-input d-flex justify-content-center align-items-center h-100">
                                 <div dir="ltr" class="text-center shaba-num" id="shaba-num">IR12 4567 8910 1112 1314
                                     1234 59
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="row h-25">
-                        <div class="border">
+                        <div class="">
                             <div class="name-input px-5 d-flex justify-content-start align-items-center h-100">
                                 <div class="text-center card-name" id="card-name">محمدرضا گل زارت
                                 </div>
@@ -108,20 +108,24 @@
             </div>
         </div>
         <!-- ورودی کارت و شبا -->
-        <div class="row justify-content-center my-5 p-2 border">
+        <div class="row justify-content-center my-5 p-2 ">
             <div class="col-12 col-md-8 col-lg-6 input-form ">
-                <div class="row g-3">
+                <div class="row g-3" dir="ltr">
                     <div class="col-3">
-                        <input type="number" class="form-control text-center" maxlength="4" placeholder="XXXX"/>
+                        <input id="card-digit-1" type="number" class="form-control text-center" maxlength="4"
+                               placeholder="1XXX"/>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-control text-center" maxlength="4" placeholder="XXXX"/>
+                        <input id="card-digit-2" type="number" class="form-control text-center" maxlength="4"
+                               placeholder="2XXX"/>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-control text-center" maxlength="4" placeholder="XXXX"/>
+                        <input id="card-digit-3" type="number" class="form-control text-center" maxlength="4"
+                               placeholder="3XXX"/>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-control text-center" maxlength="4" placeholder="XXXX"/>
+                        <input id="card-digit-4" type="number" class="form-control text-center" maxlength="4"
+                               placeholder="4XXX"/>
                     </div>
                 </div>
                 <div class="mt-3">
@@ -154,12 +158,73 @@
     </section>
     <!--⬇️ Second-sections starts here-->
     <section id="section2"
-             class="section-2 h-75 bg-secondary text-white d-flex justify-content-center align-items-center">
-        <h2>بخش ۲</h2>
+             class="section-2 bg-secondary text-white d-flex justify-content-center align-items-start">
+        <div class="row w-100">
+            <div class="guide-container ">
+                <div class="col-12 my-3"><h2>راهنما</h2></div>
+                <div dir="rtl" class="accordion" id="accordionExample">
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header rounded-accordion">
+                            <button class=" accordion-button accordion-header" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                چگونه از کارت نگار استفاده کنم❓
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-text">
+                                <p class="accordion-text-content">
+                                    اگر میخواهید بدون ارسال اطلاعات حساس روی کارت 💳 از قبیل تاریخ انقضاء و CVV2 یک تصویر
+                                    با کیفیت از کارت خود برای مشتری و ... خود ارسال کنید،کافی است اطلاعات لازم را از
+                                    طریق فرم تکمیل و تصویر را با پس زمینه دلخواهتان دانلود کنید.⬇️
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header rounded-accordion">
+                            <button class="accordion-button collapsed accordion-header" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                آیا کارت نگار امن است؟ 🔐
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-text">
+                                <p class="accordion-text-content ">
+                                    کارت نگار یک سرویس Client-Side است وقابلیت ذخیره هیچگونه اطلاعاتی را ندارد.لذا کاملا
+                                    امن است.🔒
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header rounded-accordion">
+                            <button class="accordion-button collapsed accordion-header" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                چرا باید از کارت نگار استفاده کرد؟🎨
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-text">
+                                <p class="accordion-text-content ">یکی از دلایل ساخت این سرویس امکان لو رفتن اطلاعات کار
+                                    شما هنگام ارسال تصویر آن برای
+                                    شخص دیگر است، که به وسیله آن اطلاعات حساس روی کارت هم در اختیار دیگران قرار گرفته
+                                    و ممکن است منجر به از برداشت از حساب شما شود.💔
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--⬇️ Third-sections starts here-->
-    <section id="section3" class="section-3 h-75 bg-dark text-white d-flex justify-content-center align-items-center">
+    <section id="section3" class="section-3  bg-dark text-white d-flex justify-content-center align-items-center">
         <h2>بخش ۳</h2>
+
     </section>
     <span class="theme-toggle-btn">🌓</span>
 </div>

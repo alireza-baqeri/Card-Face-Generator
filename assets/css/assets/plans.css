@@ -93,3 +93,19 @@
     border: 1px dashed #1ce0ac;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
+
+.accordion-text-content {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.accordion-text {
+    background-color: azure;
+}
+
+.accordion-header {
+    background-color: #0d1d5e;
+    color: white;
+}
+

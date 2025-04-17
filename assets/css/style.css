@@ -104,7 +104,6 @@ body {
 }
 
 
-
 .theme-toggle-btn {
     position: fixed;
     left: 10px;
@@ -124,4 +123,15 @@ body {
 
 .body-class-dark {
     background: linear-gradient(150deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e);
+}
+
+
+.accordion-button::after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    filter: brightness(0) invert(1);
+}
+.rounded-accordion{
+    border-radius: 15px;
 }
