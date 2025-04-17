@@ -1,0 +1,157 @@
+/*⬇️Dynamic font-size for the top menu*/
+.custom-btn-font {
+    font-size: 0.85rem; /* پیش‌فرض کوچیک‌تر برای موبایل */
+}
+
+@media (min-width: 576px) {
+    .custom-btn-font {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-btn-font {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .custom-btn-font {
+        font-size: 1.2rem;
+    }
+}
+
+/*⬇️Dynamic width for the menu-icon*/
+.menu-icon-mquery {
+    width: 3rem;
+    height: auto; /* پیش‌فرض کوچیک‌تر برای موبایل */
+}
+
+@media (min-width: 576px) {
+    .menu-icon-mquery {
+        width: 3.5rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-icon-mquery {
+        width: 4rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .menu-icon-mquery {
+        width: 4.5rem;
+        height: auto;
+    }
+}
+
+
+/*⬇️card number*/
+.card-number-mquery {
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 374px) {
+    .card-number-mquery {
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 429px) {
+    .card-number-mquery {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-number-mquery {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-number-mquery {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .card-number-mquery {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+}
+
+
+/*⬇️Shetab Responsive Icon*/
+.shetab-icon-mquery {
+    width: 2.8rem;
+    /*height: 50%; !* پیش‌فرض کوچیک‌تر برای موبایل *!*/
+    /*height: auto;*/
+}
+
+@media (min-width: 576px) {
+    .shetab-icon-mquery {
+        width: 3.2rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .shetab-icon-mquery {
+        width: 3.4rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .shetab-icon-mquery {
+        width: 4.5rem;
+        height: auto;
+    }
+}
+
+
+/*⬇️Bank Icon Responsive*/
+
+.bank-icon-mquery {
+    width: 4rem;
+    /*height: 50%; !* پیش‌فرض کوچیک‌تر برای موبایل *!*/
+    height: auto;
+}
+
+@media (min-width: 400px) {
+    .bank-icon-mquery {
+        width: 4.5rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 576px) {
+    .bank-icon-mquery {
+        width: 5rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .bank-icon-mquery {
+        width: 5rem;
+        height: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .bank-icon-mquery {
+        width: 5.5rem;
+        height: auto;
+    }
+}

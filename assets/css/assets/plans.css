@@ -3,7 +3,7 @@
     border-radius: 15px 15px 0 0;
 }
 
-
+/*⬇️the title of the page*/
 .h1-title {
     font-family: 'lalezar', serif;
     font-size: 32px;
@@ -14,9 +14,9 @@
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
-
 }
 
+/*⬇️CARD*/
 .card-container {
     padding: 5px;
     aspect-ratio: 1.586 / 1; /* نسبت طلایی برای کارت */
@@ -28,38 +28,50 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.shetab-ico {
-    position: absolute;
-    top: 20px;
-    left: 15px;
-    width: 65px;
-    height: 35px;
-    background-color: #000;
-    border-radius: 4px;
+.shetab-div {
+    width: 20%;
 }
 
+/*⬇️Shetab Icon on the top left */
+.shetab-ico {
+    /*position: relative;*/
+    /*top: 0;*/
+    /*right: 15px;*/
+    border-radius: 4px;
+    filter: drop-shadow(3px 1px 10px rgba(10, 0, 2, 0.9));
+
+
+    /*padding: 5px;*/
+    /*aspect-ratio: 1.586 / 1; !* نسبت طلایی برای کارت *!*/
+    /*width: 100%;*/
+    /*background: linear-gradient(to bottom right, #97ffc6, #c9ff50);*/
+    /*border-radius: 12px;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);*/
+}
+
+/* the div which contains the bank icon*/
 .bank-div {
     width: 20%;
 }
 
+/*⬇️ Icon for the bank*/
 .bank-ico {
-    position: relative;
-    top: 0;
-    right: 15px;
-    width: 100%;
-    height: auto;
+    /*width: 100%;*/
+    /*height: auto;*/
     border-radius: 4px;
     filter: drop-shadow(3px 1px 10px rgba(10, 0, 2, 0.9));
 }
 
+/*⬇️card-number ui*/
 .card-num {
-    width: 100%;
+    /*width: 100%;*/
     font-family: 'Vazir', serif;
-    font-size: 32px;
-    letter-spacing: 2px;
     font-weight: bolder;
 }
 
+/*⬇️shaba-number UI*/
 .shaba-num {
     width: 100%;
     font-family: 'Vazir Code', serif;
@@ -67,6 +79,7 @@
     /*font-weight: bold;*/
 }
 
+/*⬇️card-name UI */
 .card-name {
     font-family: 'iran Sans', serif;
     font-size: 18px;
