@@ -1,67 +1,133 @@
-.perspolis {
+.back-1 {
     background-image: url("");
 }
 
-.esteghlal {
-    background-image: url("");
-}
-
-
-.light-card {
-    background-image: url("");
-}
-
-.gradient-card-1 {
-    background-image: url("");
-}
-
-.gradient-card-2 {
-    background-image: url("");
-}
-
-.gradient-card-3 {
-    background-image: url("");
-}
-
-.gradient-card-4 {
-    background-image: url("");
-}
-
-.gradient-card-5 {
-    background-image: url("");
-}
-
-.funny-card-1 {
-    background-image: url("");
-}
-
-.iran-card {
-    background-image: url("");
-}
-
-.celebrity-card-1 {
-    background-image: url("");
-}
-
-.celebrity-card-2 {
-    background-image: url("");
-}
-
-.celebrity-card-3 {
-    background-image: url("");
-}
-
-.celebrity-card-4 {
-    background-image: url("");
-}
-
-.celebrity-card-5 {
-    background-image: url("");
-}
-
-.celebrity-card-6 {
+.back-2 {
     background-image: url("");
 }
 
 
+.back-3 {
+    background-image: url("");
+}
 
+.back-4 {
+    background-image: url("");
+}
+
+.back-5 {
+    background-image: url("");
+}
+
+.back-6 {
+    background-image: url("");
+}
+
+.back-7 {
+    background-image: url("");
+}
+
+.back-8 {
+    background-image: url("");
+}
+
+.back-9 {
+    background-image: url("");
+}
+
+.back-10 {
+    background-image: url("");
+}
+
+.back-11 {
+    background-image: url("");
+}
+
+.back-12 {
+    background-image: url("");
+}
+
+.back-13 {
+    background-image: url("");
+}
+
+.back-14 {
+    background-image: url("");
+}
+
+.back-15 {
+    background-image: url("");
+}
+
+.back-16 {
+    background-image: url("");
+}
+
+
+/* CSS */
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(۰, ۰, ۰);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(
+            45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffc107;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
