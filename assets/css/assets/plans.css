@@ -1,7 +1,7 @@
 /*⬇️ Here starts the container*/
-.section-1 {
-    border-radius: 15px 15px 0 0;
-}
+/*.section-1 {*/
+/*    border-radius: 15px 15px 0 0;*/
+/*}*/
 
 /*⬇️the title of the page*/
 .h1-title {
@@ -109,3 +109,6 @@
     color: white;
 }
 
+.section-3 {
+    border-radius: 15px;
+}

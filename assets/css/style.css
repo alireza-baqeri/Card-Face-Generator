@@ -95,7 +95,7 @@ body {
 body {
     scroll-behavior: smooth;
     padding-top: 50px;
-    height: 100%;
+    /*height: 100%;*/
 
 }
 
@@ -106,8 +106,8 @@ body {
 
 .theme-toggle-btn {
     position: fixed;
-    left: 10px;
-    bottom: 10px;
+    left: 5px;
+    bottom: 35px;
     background-color: #444;
     color: white;
     padding: 8px 12px;
@@ -122,7 +122,8 @@ body {
 }
 
 .body-class-dark {
-    background: linear-gradient(-40deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e);
+    background-size: cover;
+    background: linear-gradient(-40deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e) no-repeat fixed center;
 }
 
 
@@ -150,7 +151,7 @@ body {
 
 .i-img-container {
     vertical-align: baseline;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 
 }
 
