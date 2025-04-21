@@ -118,12 +118,29 @@ body {
 }
 
 .body-class-light {
-    background-color: #efefef;
+    background-color: #fcb69f;
+
+    /*background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);*/
+    /*background-color: #efefef;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    transition: background 1.2s ease;
+
 }
 
 .body-class-dark {
-    background-size: cover;
-    background: linear-gradient(-40deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e) no-repeat fixed center;
+    background-color:#302B63FF;
+    /*background: linear-gradient(-40deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e) no-repeat fixed center;*/
+    /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
+    /*background: linear-gradient(135deg, #232526 0%, #414345 100%);*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    transition: background 0.5s ease;
+
+
+
 }
 
 
@@ -158,6 +175,7 @@ body {
 .download-icon {
     width: 1.5rem;
     height: auto;
+    margin-right: 2em;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
     vertical-align: sub;
 }
