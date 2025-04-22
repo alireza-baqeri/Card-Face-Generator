@@ -130,7 +130,7 @@ body {
 }
 
 .body-class-dark {
-    background-color:#302B63FF;
+    background-color: #302B63FF;
     /*background: linear-gradient(-40deg, #f9f9f9, #d4dad6, #afbbb6, #8b9d9b, #698083, #49636f, #2c475c, #142b4e) no-repeat fixed center;*/
     /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
     /*background: linear-gradient(135deg, #232526 0%, #414345 100%);*/
@@ -138,7 +138,6 @@ body {
     background-attachment: fixed;
     background-position: center;
     transition: background 0.5s ease;
-
 
 
 }
@@ -179,5 +178,4 @@ body {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
     vertical-align: sub;
 }
-
 
