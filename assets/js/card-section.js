@@ -42,6 +42,9 @@ builderBtn.addEventListener("click", function () {
 })
 
 
+
+
+
 // cardNumberInputOne.addEventListener("input", function (e) {
 //     let eValue = e.target.value;
 //     if (!isNaN(eValue) && eValue !== "") { // چک کن عددی باشه

@@ -51,21 +51,21 @@
 
 /*⬇️card number*/
 .card-number-mquery {
-    font-size: 27px;
-    letter-spacing: 2px;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
 }
 
 @media (min-width: 374px) {
     .card-number-mquery {
-        font-size: 26px;
-        letter-spacing: 2px;
+        font-size: 1.5em;
+        letter-spacing: 1.6px;
     }
 }
 
 @media (min-width: 429px) {
     .card-number-mquery {
-        font-size: 32px;
-        letter-spacing: 2px;
+        font-size: 1.8em;
+        letter-spacing: 1.8px;
     }
 }
 
