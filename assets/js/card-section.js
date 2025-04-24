@@ -1,6 +1,10 @@
 'use strict'// @ts-nocheck
 // selecting the number on the card 
-const numerOnTheCard = document.getElementById("card-num")
+const numberOnTheCard = document.getElementById("card-num")
+const firstNumberOnTheCard = document.querySelector(".cardDigit-1").value
+const secondNumberOnTheCard = document.querySelector(".cardDigit-2").value
+const thirdNumberOnTheCard = document.querySelector(".cardDigit-3").value
+const fourthNumberOnTheCard = document.querySelector(".cardDigit-4").value
 // selecting the shaba on the card
 const shabaOnTheCard = document.getElementById("shaba-num")
 //selecting the name on the card
@@ -17,7 +21,7 @@ const cardNumberInputTwo = document.querySelector("#card-digit-2")
 const cardNumberInputThree = document.querySelector("#card-digit-3")
 const cardNumberInputFour = document.querySelector("#card-digit-4")
 // shaba input
-const shabaInput = document.querySelector("#shabaInput")
+const shabaInput = document.querySelector("#shabaInput").value
 //name input
 const nameInput = document.querySelector("#nameInput")
 
@@ -33,14 +37,32 @@ const cardNumbersColorChangerBtn = document.querySelector(".cardNumbersColorChan
 //selecting picture generator btn
 const cardDownloaderBtn = document.querySelector(".cardDownloaderBtn")
 
-let enteredCardNum = "";
 
 builderBtn.addEventListener("click", function () {
+    const one = cardNumberInputOne.value;
+    const two = cardNumberInputTwo.value;
+    const three = cardNumberInputThree.value;
+    const four = cardNumberInputFour.value;
+    const shaba = shabaInput.value;
 
-    enteredCardNum = cardNumberInputOne.value + " " + cardNumberInputTwo.value + " " + cardNumberInputThree.value + " " + cardNumberInputFour.value
-    console.log(enteredCardNum)
-})
+    const allDigitsFilled = one.length === 4 && two.length === 4 && three.length === 4 && four.length === 4;
+    const shabaValid = shaba.length === 20 || shaba.length === 0;
 
+    if (allDigitsFilled && shabaValid) {
+        firstNumberOnTheCard.textContent = one;
+        secondNumberOnTheCard.textContent = two;
+        thirdNumberOnTheCard.textContent = three;
+        fourthNumberOnTheCard.textContent = four;
+
+        if (shaba.length === 20) {
+            shabaOnTheCard.textContent = shaba;
+        }
+    } else {
+        const myModal = new bootstrap.Modal(document.getElementById('warningModal'));
+        myModal.show();
+        document.querySelector(".wrongCardNumber").classList.remove("d-none");
+    }
+});
 
 
 

@@ -110,7 +110,7 @@
             </div>
         </div>
         <!-- ورودی کارت و شبا ⬇️-->
-        <form action="" id="card-form">
+        <form id="card-form">
             <div class="row justify-content-center mt-2 mb-5 p-2 ">
                 <div class="col-12 col-md-8 col-lg-6 input-form ">
                     <div class="row g-3" dir="ltr">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                        <input type="text" class="form-control text-center shabaInput" placeholder="شماره شبا"/>
+                        <input type="text" maxlength="20" pattern="\d{20}" class="form-control text-center shabaInput" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="شماره شبا"/>
                     </div>
                     <!--⬇️build button and change card background button and name entrance-->
                     <div class="row g-2 mt-1">
@@ -280,6 +280,21 @@
                     <li class="col-2 d-flex justify-content-center"><a href="mailto:alirzabgh@gmail.com"><i
                             class="fa-solid fa-envelope"></i></a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
+<!--    Bootstrap model-->
+    <div class="modal fade" id="warningModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">❌خطا❌</h5></div>
+                <div class="modal-body">
+                    <p class="wrongCardNumber d-none">شماره کارت را صحیح و کامل وارد نمایید</p>
+                    <p class="wrongShabaNumber d-none">در صورت تمایل به وارد کردن شماره شبا، 20 رقم را کامل وارد نمایید.در غیر اینصورت آنرا خالی رها کنید.</p>
+                    <p class="wrongName d-none">لطفا نام و نام خانوادگی خود را صحیح وارد کنید</p>
+
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-warning align-bottom" data-bs-dismiss="modal">باشه عزیزم✅</button></div>
             </div>
         </div>
     </div>
