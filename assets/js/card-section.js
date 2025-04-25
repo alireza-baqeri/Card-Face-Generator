@@ -1,192 +1,197 @@
-'use strict'// @ts-nocheck
-// selecting the number on the card 
-const numberOnTheCard = document.getElementById("card-num")
-const firstNumberOnTheCard = document.querySelector(".cardDigit-1")
-const secondNumberOnTheCard = document.querySelector(".cardDigit-2")
-const thirdNumberOnTheCard = document.querySelector(".cardDigit-3")
-const fourthNumberOnTheCard = document.querySelector(".cardDigit-4")
-// selecting the shaba on the card
-const shabaOnTheCard = document.getElementById("shaba-num")
-//selecting the name on the card
-const nameOnTheCard = document.getElementById("card-name")
-//selecting the Cards background
-const cardBackground = document.querySelector(".card-container")
-// Selecting the Card Numbers
-const cardNumberColor = document.querySelectorAll(".card-num,.shaba-num,.card-name")
+"use strict";
 
-//⬇️selecting the inputs
-//4inputs for 4digits
-const cardNumberInputOne = document.querySelector("#card-digit-1")
-const cardNumberInputTwo = document.querySelector("#card-digit-2")
-const cardNumberInputThree = document.querySelector("#card-digit-3")
-const cardNumberInputFour = document.querySelector("#card-digit-4")
-// shaba input
-const shabaInput = document.querySelector("#shabaInput")
-//name input
-const nameInput = document.querySelector("#nameInput")
+// انتخاب عناصر کارت
+const numberOnTheCard = document.getElementById("card-num");
+const firstNumberOnTheCard = document.querySelector(".cardDigit-1");
+const secondNumberOnTheCard = document.querySelector(".cardDigit-2");
+const thirdNumberOnTheCard = document.querySelector(".cardDigit-3");
+const fourthNumberOnTheCard = document.querySelector(".cardDigit-4");
+const shabaOnTheCard = document.getElementById("shaba-num");
+const nameOnTheCard = document.getElementById("card-name");
+const cardBackground = document.querySelector(".card-container");
+const cardNumberColor = document.querySelectorAll(
+  ".card-num, .shaba-num, .card-name"
+);
 
-//⬇️ Selecting buttons
-//theme change button
-const themeChangerBtn = document.querySelector(".cardNumbersChangerBtn")
-// selecting the reset button
-const resetBtn = document.querySelector(".cardResetBtn")
-//selecting the builder button 
-const builderBtn = document.querySelector(".buildCardBtn")
-//selecting card numbers color changer btn
-const cardNumbersColorChangerBtn = document.querySelector(".cardNumbersColorChangerBtn")
-//selecting picture generator btn
-const cardDownloaderBtn = document.querySelector(".cardDownloaderBtn")
+//color of texts on the card
+const colors = document.querySelectorAll(".cardTexts");
+// انتخاب ورودی‌ها
+const cardNumberInputOne = document.getElementById("card-digit-1");
+const cardNumberInputTwo = document.getElementById("card-digit-2");
+const cardNumberInputThree = document.getElementById("card-digit-3");
+const cardNumberInputFour = document.getElementById("card-digit-4");
+const shabaInput = document.querySelector(".shabaInput"); // اصلاح: کلاس به‌جای آیدی
+const nameInput = document.querySelector(".nameInput");
 
+// انتخاب دکمه‌ها
+const themeChangerBtn = document.querySelector(".cardThemeChangerBtn"); // اصلاح: کلاس درست
+const resetBtn = document.querySelector(".cardResetBtn");
+const builderBtn = document.querySelector(".buildCardBtn");
+const cardNumbersColorChangerBtn = document.querySelector(
+  ".cardNumbersChangerBtn"
+);
+const cardDownloaderBtn = document.querySelector(".cardDownload");
 
+// تابع کمکی برای بازنشانی پیام‌های خطا
+function resetErrorMessages() {
+  document.querySelector(".wrongCardNumber").classList.add("d-none");
+  document.querySelector(".wrongShabaNumber").classList.add("d-none");
+  document.querySelector(".wrongName").classList.add("d-none");
+}
 
-
-
-
+// رویداد برای دکمه ساخت
 builderBtn.addEventListener("click", function (e) {
-     e.preventDefault();
-    // card
-    const one = cardNumberInputOne.value;
-    const two = cardNumberInputTwo.value;
-    const three = cardNumberInputThree.value;
-    const four = cardNumberInputFour.value;
+  e.preventDefault();
+  resetErrorMessages();
 
-    // if (shabaInput.value.length === 20) { 
-    //     const shaba = shabaInput.value;
-    // } else {
-    //     const shaba = 0;
-    // }
-    
-    // if (typeof(Number(shabaInput.value)) === "number") {
-      
-    // } else {
-    //     const shabaValid = false
-    // }
-    // const shabaNull = typeof(shabaInput.value) ? Number: false ;
-    // let shaba
-    // if (!shabaNull) { 
-    //     shaba = shabaInput.value; 
-    // }
+  // ورودی‌های شماره کارت
+  const one = cardNumberInputOne.value.trim();
+  const two = cardNumberInputTwo.value.trim();
+  const three = cardNumberInputThree.value.trim();
+  const four = cardNumberInputFour.value.trim();
+  const allDigitsFilled =
+    one.length === 4 &&
+    two.length === 4 &&
+    three.length === 4 &&
+    four.length === 4;
 
-    const allDigitsFilled = one.length === 4 && two.length === 4 && three.length === 4 && four.length === 4;
-    // shaba
-    const shabaValid = shaba.length === 20 || shaba.length === 0;
-    // name
-    const personName = nameOnTheCard.value;
-    const nameValid = personName.replace(" ", "").length > 3;
+  // ورودی شبا
+  const shaba = shabaInput.value.trim();
+  const shabaValid = shaba.length === 0 || shaba.length === 20;
 
-    let errors = 0;
+  // ورودی نام
+  const personName = nameInput.value.trim();
+  const nameValid = personName.replace(/\s/g, "").length > 3;
 
+  let errors = 0;
 
-    if (allDigitsFilled) {
-        firstNumberOnTheCard.textContent = one;
-        secondNumberOnTheCard.textContent = two;
-        thirdNumberOnTheCard.textContent = three;
-        fourthNumberOnTheCard.textContent = four;
+  // اعتبارسنجی شماره کارت
+  if (allDigitsFilled) {
+    firstNumberOnTheCard.textContent = one;
+    secondNumberOnTheCard.textContent = two;
+    thirdNumberOnTheCard.textContent = three;
+    fourthNumberOnTheCard.textContent = four;
+  } else {
+    document.querySelector(".wrongCardNumber").classList.remove("d-none");
+    errors++;
+  }
 
+  // اعتبارسنجی شبا
+  if (shabaValid) {
+    if (shaba) {
+      shabaOnTheCard.textContent = `IR ${shaba}`;
     } else {
-        document.querySelector(".wrongCardNumber").classList.remove("d-none");
-        errors++;
+      shabaOnTheCard.textContent = " ";
     }
+  } else {
+    document.querySelector(".wrongShabaNumber").classList.remove("d-none");
+    errors++;
+  }
 
-    if (shabaValid) {
-        shabaOnTheCard.textContent = shaba;
-    } else {
-        if (shaba.value.length === 0) {
-            shabaOnTheCard.textContent = ' ';
-        } else {
-            document.querySelector(".wrongShaba").classList.remove("d-none");
-            errors++;
-        }
-    }
-    if (nameValid) {
-        personName.textContent = nameInput;
-    } else {
-        document.querySelector(".wrongName").classList.remove("d-none");
-        errors++;
-    }
-    if (errors > 0) {
-        const myModal = new bootstrap.Modal(
-          document.getElementById("warningModal")
-        );
-        myModal.show();
-    }
+  // اعتبارسنجی نام
+  if (nameValid) {
+    nameOnTheCard.textContent = personName;
+  } else {
+    document.querySelector(".wrongName").classList.remove("d-none");
+    errors++;
+  }
+
+  // نمایش مودال در صورت وجود خطا
+  if (errors > 0) {
+    const myModal = new bootstrap.Modal(
+      document.getElementById("warningModal")
+    );
+    myModal.show();
+  }
 });
 
+// رویداد برای دکمه تغییر تم
+themeChangerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const themes = [
+    "back-default",
+    "back-1",
+    "back-2",
+    "back-3",
+    "back-4",
+    "back-5",
+    "back-6",
+    "back-7",
+    "back-8",
+    "back-9",
+    "back-10",
+    "back-11",
+    "back-12",
+    "back-13",
+    "back-14",
+    "back-15",
+    "back-16",
+  ];
+  const currentTheme = cardBackground.classList[1] || "back-default";
+  const newTheme = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+  cardBackground.classList.remove(currentTheme);
+  cardBackground.classList.add(newTheme);
+  // cardBackground.classList.add("blurred");
+});
 
+// رویداد برای دکمه تغییر رنگ متن
+let colorCounter = 1;
+cardNumbersColorChangerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
+  // حذف کلاس قبلی از همه عناصر
+  colors.forEach((element) => {
+    element.classList.remove(`cardTextColor-${colorCounter}`);
+  });
 
-// cardNumberInputOne.addEventListener("input", function (e) {
-//     let eValue = e.target.value;
-//     if (!isNaN(eValue) && eValue !== "") { // چک کن عددی باشه
-//         numerOnTheCard.textContent = eValue;
-//
-//     }
-// })
+  // افزایش کانتر و ریست به 1 بعد از 4
+  colorCounter = (colorCounter % 4) + 1;
 
+  // اضافه کردن کلاس جدید به همه عناصر
+  colors.forEach((element) => {
+    element.classList.add(`cardTextColor-${colorCounter}`);
+  });
+});
+// منطق تغییر رنگ متن (مثال: تغییر رنگ به صورت تصادفی)
+// const colors = ["#ffffff", "#000000", "#ff0000", "#00ff00", "#0000ff"];
+// const randomColor = colors[Math.floor(Math.random() * colors.length)];
+// cardNumberColor.forEach((element) => {
+//   element.style.color = randomColor;
+// });
 
-// cardNumberInputOne.addEventListener("input", function (e) {
-//     let eValue = e.target.value;
-//     if (!isNaN(eValue) && eValue !== "") { // چک کن عددی باشه
-//         numerOnTheCard.textContent = eValue;
-//
-//     }
-// })
+// رویداد برای دکمه دانلود
+cardDownloaderBtn.addEventListener("click", function (e) {
+  e.preventDefault();
 
-// cardNumberInput.forEach(input => {
-//     input.addEventListener("input",function(e)){
-//         const value = e.target.value;
-//         if(!isNaN())
-//     }
-// })
+  // منطق دانلود تصویر (نیاز به کتابخانه مثل html2canvas)
+  // مثال:
+  html2canvas(cardBackground).then((canvas) => {
+    const link = document.createElement("a");
+    link.download = "card.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
+  alert(
+    "قابلیت دانلود تصویر هنوز پیاده‌سازی نشده است. از html2canvas استفاده کنید."
+  );
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// رویداد برای دکمه ریست
+resetBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  cardNumberInputOne.value = "";
+  cardNumberInputTwo.value = "";
+  cardNumberInputThree.value = "";
+  cardNumberInputFour.value = "";
+  shabaInput.value = "";
+  nameInput.value = "";
+  firstNumberOnTheCard.textContent = "XXXX";
+  secondNumberOnTheCard.textContent = "XXXX";
+  thirdNumberOnTheCard.textContent = "XXXX";
+  fourthNumberOnTheCard.textContent = "XXXX";
+  shabaOnTheCard.textContent = "IRXX XXXX XXXX XXXX XXXX XX";
+  nameOnTheCard.textContent = "نام شما";
+  cardBackground.classList.remove(currentTheme);
+  cardBackground.classList.add("back-default");
+  resetErrorMessages();
+});

@@ -21,7 +21,6 @@
     padding: 5px;
     aspect-ratio: 1.586 / 1; /* نسبت طلایی برای کارت */
     width: 100%;
-    background: linear-gradient(to bottom right, #97ffc6, #c9ff50);
     border-radius: 12px;
     position: relative;
     overflow: hidden;

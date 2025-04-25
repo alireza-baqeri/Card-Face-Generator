@@ -1,133 +1,202 @@
+.back-default {
+  background: linear-gradient(to bottom right, #97ffc6, #c9ff50);
+}
 .back-1 {
-    background-image: url("");
+  background: #a8c0ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f2b96,
+    #a8c0ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f2b96,
+    #a8c0ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  backdrop-filter: blur(10px);
 }
 
 .back-2 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-2.jpg");
+  backdrop-filter: blur(10px);
 }
 
-
 .back-3 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-3.jpg");
+  
 }
 
 .back-4 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-4.jpg");
 }
 
 .back-5 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-5.jpg");
 }
 
 .back-6 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-6.jpg");
 }
 
 .back-7 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-7.jpg");
 }
 
 .back-8 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-8.jpg");
 }
 
 .back-9 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-9.jpg");
 }
 
 .back-10 {
-    background-image: url("");
+  background-image: url("../../img/background/theme/back-10.jpg");
 }
 
 .back-11 {
-    background-image: url("");
+  background: #636363; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a2ab58,
+    #636363
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a2ab58,
+    #636363
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .back-12 {
-    background-image: url("");
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
 .back-13 {
-    background-image: url("");
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .back-14 {
-    background-image: url("");
+  background: #3f5efb;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
 
 .back-15 {
-    background-image: url("");
+  background: #833ab4;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 .back-16 {
-    background-image: url("");
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
+
+.back-2, .back-3, .back-4, .back-5, .back-6, .back-7, .back-8, .back-9, .back-10 {
+  background-size: cover; /* تصویر کل فضا رو پر کنه */
+  background-repeat: no-repeat; /* جلوگیری از تکرار تصویر */
+  background-position: center; /* تصویر در مرکز قرار بگیره */
+}
+
+.cardTextColor-1{
+  color: white;
+  text-shadow: 3px 2px 1px black;
+}
+.cardTextColor-2{
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 2px 1px rgb(255, 255, 255);
+}
+.cardTextColor-3{
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 2px 1px rgb(0, 0, 0);
+}
+.cardTextColor-4{
+  color: rgb(227, 193, 0);
+  text-shadow: 3px 2px 1px rgb(255, 253, 253);
+}
+
+/* .blurred{
+  filter: blur(5px);
+} */
 
 /* CSS */
 .button-85 {
-    padding: 0.6em 2em;
-    border: none;
-    outline: none;
-    /*color: rgb(۰, ۰, ۰);*/
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  /*color: rgb(۰, ۰, ۰);*/
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .button-85:before {
-    content: "";
-    background: linear-gradient(
-            45deg,
-            #ff0000,
-            #ff7300,
-            #fffb00,
-            #48ff00,
-            #00ffd5,
-            #002bff,
-            #7a00ff,
-            #ff00c8,
-            #ff0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing-button-85 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 @keyframes glowing-button-85 {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .button-85:after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #ffc107;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffc107;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
