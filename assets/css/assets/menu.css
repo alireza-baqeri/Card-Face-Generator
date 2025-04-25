@@ -137,6 +137,11 @@
     text-shadow: 1px 1px 7px rgb(255, 253, 253);
 }
 
+.cardTextColor-dark {
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 7px rgb(255, 253, 253);
+}
+
 .card-container {
     position: relative;
     background: none;
