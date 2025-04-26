@@ -81,7 +81,7 @@ builderBtn.addEventListener("click", function (e) {
 
     // ورودی شبا
     const shaba = shabaInput.value.trim();
-    const shabaValid = shaba.length === 0 || shaba.length === 20;
+    const shabaValid = shaba.length === 0 || shaba.length === 24;
 
     // ورودی نام
     const personName = nameInput.value.trim();
@@ -278,7 +278,7 @@ resetBtn.addEventListener("click", function (e) {
     secondNumberOnTheCard.textContent = "XXXX";
     thirdNumberOnTheCard.textContent = "XXXX";
     fourthNumberOnTheCard.textContent = "XXXX";
-    shabaOnTheCard.textContent = "IRXX XXXX XXXX XXXX XXXX XX";
+    shabaOnTheCard.textContent = "IRXX XXXX XXXX XXXX XXXX XXXX";
     nameOnTheCard.textContent = "نام شما";
 
     // ریست تم
