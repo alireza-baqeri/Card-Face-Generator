@@ -1,5 +1,47 @@
 "use strict";
 
+import html2canvas from 'html2canvas';
+
+
+// تابع دانلود تصویر
+function downloadPNG(e) {
+    e.preventDefault()
+    const element = document.querySelector(".card-container");
+    html2canvas(element, {
+        scale: 3, // افزایش کیفیت تصویر
+        useCORS: true, // برای لود درست تصاویر خارجی مثل لوگو بانک
+        backgroundColor: null, // پس‌زمینه شفاف
+        logging: false, // خاموش کردن لاگ‌های دیباگ
+        width: element.offsetWidth, // عرض دقیق المان
+        height: element.offsetHeight // ارتفاع دقیق المان
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'card-image.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }).catch(error => {
+        console.error('خطا در دانلود تصویر:', error);
+    });
+}
+
+// import html2canvas from 'html2canvas';
+
+// بعدش می‌تونی دقیقا همون کاری که گفتیم رو انجام بدی
+// html2canvas(document.getElementById('target')).then(canvas => {
+//     document.body.appendChild(canvas);
+// });
+
+// function downloadPNG() {
+//     const element = document.getElementById('capture'); // بخشی از صفحه که میخواهید دانلود بشه
+//
+//     html2canvas(element).then(canvas => {
+//         const link = document.createElement('a');
+//         link.download = 'card-image.png'; // نام فایل تصویر
+//         link.href = canvas.toDataURL('image/png');
+//         link.click();
+//     });
+// }
+
 // انتخاب عناصر کارت
 // const numberOnTheCard = document.getElementById("card-num");
 const firstNumberOnTheCard = document.querySelector(".cardDigit-1");
@@ -12,6 +54,7 @@ const cardBackground = document.querySelector(".card-container");
 //color of texts on the card
 // const cardNumberColor = document.querySelectorAll(".card-num, .shaba-num, .card-name");
 const colors = document.querySelectorAll(".cardTexts");
+// اضافه کردن کلاس اولیه به همه عناصر
 // انتخاب ورودی‌ها
 const cardNumberInputOne = document.getElementById("card-digit-1");
 const cardNumberInputTwo = document.getElementById("card-digit-2");
@@ -77,59 +120,60 @@ builderBtn.addEventListener("click", function (e) {
         fourthNumberOnTheCard.textContent = four;
         bankIbn = one + two;
         console.log(typeof (bankIbn));
+        let firstSixDigits = bankIbn.slice(0, 6);
+        const banks = {
+            '627412': 'eghtesad-novin.png',
+            '627381': 'ansar.png',
+            '505785': 'iranzamin.png',
+            '622106': 'parsian.png',
+            '639194': 'parsian.png',
+            '627884': 'parsian.png',
+            '639347': 'pasargad.png',
+            '502229': 'pasargad.png',
+            '636214': 'ayandeh.png',
+            '627353': 'tejarat.png',
+            '502908': 'tosee-taavon.png',
+            '627648': 'tosee-saderat.png',
+            '207177': 'tosee-saderat.png',
+            '636949': 'hekmat.png',
+            '502938': 'dey.png',
+            '589463': 'refah.png',
+            '621986': 'saman.png',
+            '589210': 'sepah.png',
+            '639607': 'sarmayeh.png',
+            '639346': 'sina.png',
+            '502806': 'shahr.png',
+            '603769': 'saderat.png',
+            '627961': 'sanat-maadan.png',
+            '606373': 'gharzol-hassane-mehre-iranian.png',
+            '639599': 'ghavamin.png',
+            '627488': 'karafarin.png',
+            '502910': 'karafarin.png',
+            '603799': 'melli.png',
+            '603770': 'keshavarzi.png',
+            '639217': 'keshavarzi.png',
+            '505416': 'gardeshgari.png',
+            '636795': 'markazi.png',
+            '628023': 'maskan.png',
+            '610433': 'mellat.png',
+            '991975': 'mellat.png',
+            '639370': 'mehreghteshad.png',
+            '627760': 'postbank.png',
+            '628157': 'moassese-tosee.png',
+            '606256': 'mellal.png',
+            '504172': 'resalat.png'
+        };
+        if (banks[firstSixDigits]) {
+            // تغییر لوگو بانک در صفحه
+            document.querySelector(".bank-ico").src = 'assets/img/banks-icons/' + banks[firstSixDigits];
+        } else {
+            console.log('بانک شناسایی نشد');
+        }
     } else {
         document.querySelector(".wrongCardNumber").classList.remove("d-none");
         errors++;
     }
-    let firstSixDigits = bankIbn.slice(0, 6);
-    const banks = {
-        '627412': 'eghtesad-novin.png',
-        '627381': 'ansar.png',
-        '505785': 'iranzamin.png',
-        '622106': 'parsian.png',
-        '639194': 'parsian.png',
-        '627884': 'parsian.png',
-        '639347': 'pasargad.png',
-        '502229': 'pasargad.png',
-        '636214': 'ayandeh.png',
-        '627353': 'tejarat.png',
-        '502908': 'tosee-taavon.png',
-        '627648': 'tosee-saderat.png',
-        '207177': 'tosee-saderat.png',
-        '636949': 'hekmat.png',
-        '502938': 'dey.png',
-        '589463': 'refah.png',
-        '621986': 'saman.png',
-        '589210': 'sepah.png',
-        '639607': 'sarmayeh.png',
-        '639346': 'sina.png',
-        '502806': 'shahr.png',
-        '603769': 'saderat.png',
-        '627961': 'sanat-maadan.png',
-        '606373': 'gharzol-hassane-mehre-iranian.png',
-        '639599': 'ghavamin.png',
-        '627488': 'karafarin.png',
-        '502910': 'karafarin.png',
-        '603799': 'melli.png',
-        '603770': 'keshavarzi.png',
-        '639217': 'keshavarzi.png',
-        '505416': 'gardeshgari.png',
-        '636795': 'markazi.png',
-        '628023': 'maskan.png',
-        '610433': 'mellat.png',
-        '991975': 'mellat.png',
-        '639370': 'mehreghteshad.png',
-        '627760': 'postbank.png',
-        '628157': 'moassese-tosee.png',
-        '606256': 'mellal.png',
-        '504172': 'resalat.png'
-    };
-    if (banks[firstSixDigits]) {
-        // تغییر لوگو بانک در صفحه
-        document.querySelector(".bank-ico").src = 'assets/img/banks-icons/' + banks[firstSixDigits];
-    } else {
-        console.log('بانک شناسایی نشد');
-    }
+
     // اعتبارسنجی شبا
     if (shabaValid) {
         if (shaba) {
@@ -205,7 +249,7 @@ cardNumbersColorChangerBtn.addEventListener("click", function (e) {
     });
 
     // افزایش کانتر و ریست به 1 بعد از 4
-    colorCounter = (colorCounter % 4) + 1;
+    colorCounter = (colorCounter % 5) + 1;
 
     // اضافه کردن کلاس جدید به همه عناصر
     colors.forEach((element) => {
@@ -222,21 +266,22 @@ cardNumbersColorChangerBtn.addEventListener("click", function (e) {
 // });
 
 // رویداد برای دکمه دانلود
-cardDownloaderBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+// cardDownloaderBtn.addEventListener("click", function (e) {
+//     e.preventDefault();
+//
+//     // منطق دانلود تصویر (نیاز به کتابخانه مثل html2canvas)
+//     // مثال:
+//     html2canvas(cardBackground).then((canvas) => {
+//         const link = document.createElement("a");
+//         link.download = "card.png";
+//         link.href = canvas.toDataURL("image/png");
+//         link.click();
+//     });
+//     alert(
+//         "قابلیت دانلود تصویر هنوز پیاده‌سازی نشده است. از html2canvas استفاده کنید."
+//     );
+// });
 
-    // منطق دانلود تصویر (نیاز به کتابخانه مثل html2canvas)
-    // مثال:
-    html2canvas(cardBackground).then((canvas) => {
-        const link = document.createElement("a");
-        link.download = "card.png";
-        link.href = canvas.toDataURL("image/png");
-        link.click();
-    });
-    alert(
-        "قابلیت دانلود تصویر هنوز پیاده‌سازی نشده است. از html2canvas استفاده کنید."
-    );
-});
 
 // رویداد برای دکمه ریست
 // رویداد برای دکمه ریست
@@ -264,6 +309,7 @@ resetBtn.addEventListener("click", function (e) {
     cardBackground.classList.add("back-default");
     currentTheme = "back-default"; // به‌روزرسانی متغیر جهانی
 
+
     // ریست رنگ‌ها
     colors.forEach((element) => {
         // حذف همه کلاس‌های رنگ
@@ -271,12 +317,13 @@ resetBtn.addEventListener("click", function (e) {
             "cardTextColor-1",
             "cardTextColor-2",
             "cardTextColor-3",
-            "cardTextColor-4"
+            "cardTextColor-4",
+            "cardTextColor-5"
         );
         // اضافه کردن کلاس اولیه
-        element.classList.add("cardTextColor-1");
+        element.classList.add("cardTextColor-5");
     });
-    theColor = 1; // به‌روزرسانی متغیر رنگ
+    colorCounter = 0; // به‌روزرسانی متغیر رنگ
 
     // ریست پیام‌های خطا
     resetErrorMessages();

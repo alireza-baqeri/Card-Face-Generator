@@ -81,14 +81,14 @@
         <!--        ⬇️Card starts from here-->
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-sm-12 col-md-8 col-lg-6">
-                <div class="card-container back-default">
+                <div id="capture" class="card-container back-default">
                     <!-- ⬇️the first row which contains Shetab Icon and Bank Icon-->
                     <div class="row d-flex align-items-center h-25">
                         <div class="bank-div col-2 ms-auto">
                             <img
                                     class="bank-ico bank-icon-mquery"
                                     src="assets/img/banks-icons/maskan.png"
-                                    alt=""
+                                    alt="bank-logo"
                             />
                         </div>
                         <div class="shetab-div col-3">
@@ -109,10 +109,10 @@
                                         class="w-100 card-num text-center card-number-mquery"
                                         id="card-num"
                                 >
-                                    <span class="cardTexts cardDigit-1">XXXX</span>
-                                    <span class="cardTexts cardDigit-2">XXXX</span>
-                                    <span class="cardTexts cardDigit-3">XXXX</span>
-                                    <span class="cardTexts cardDigit-4">XXXX</span>
+                                    <span class="cardTextColor-dark cardTexts cardDigit-1">XXXX</span>
+                                    <span class="cardTextColor-dark cardTexts cardDigit-2">XXXX</span>
+                                    <span class="cardTextColor-dark cardTexts cardDigit-3">XXXX</span>
+                                    <span class="cardTextColor-dark cardTexts cardDigit-4">XXXX</span>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
                             >
                                 <div
                                         dir="ltr"
-                                        class="cardTexts text-center shaba-num"
+                                        class="cardTextColor-dark cardTexts text-center shaba-num"
                                         id="shaba-num"
                                 >
                                     IRXX XXXX XXXX XXXX XXXX XX
@@ -137,7 +137,7 @@
                             <div
                                     class="name-input px-5 d-flex justify-content-start align-items-center h-100"
                             >
-                                <div class="cardTexts text-center card-name" id="card-name">
+                                <div class="cardTextColor-dark cardTexts text-center card-name" id="card-name">
                                     نام شما
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
             </div>
         </div>
         <!-- ورودی کارت و شبا ⬇️-->
-        <form type="submit" id="card-form">
+        <form id="card-form">
             <div class="row justify-content-center mt-2 mb-5 p-2">
                 <div class="col-12 col-md-8 col-lg-6 input-form">
                     <div class="row g-3" dir="ltr">
@@ -254,17 +254,22 @@
                             </button>
                         </div>
                         <div class="col-8">
-                            <button
-                                    class="w-100 button-85 p-3 mt-2 border cardDownload"
-                                    role="button"
-                            >
-                                دانلود تصویر<i class="i-img-container"
-                            ><img
-                                    class="download-icon"
-                                    src="assets/icon/download.svg"
-                                    alt=""
-                            /></i>
+                            <button onclick="downloadPNG()" class="w-100 button-85 p-3 mt-2 border cardDownload"
+                                    role="button">
+                                دانلود تصویر<i class="i-img-container"><img class="download-icon"
+                                                                            src="assets/icon/download.svg" alt=""/></i>
                             </button>
+                            <!--                            <button-->
+                            <!--                                    class="w-100 button-85 p-3 mt-2 border cardDownload"-->
+                            <!--                                    role="button"-->
+                            <!--                            >-->
+                            <!--                                دانلود تصویر<i class="i-img-container"-->
+                            <!--                            ><img-->
+                            <!--                                    class="download-icon"-->
+                            <!--                                    src="assets/icon/download.svg"-->
+                            <!--                                    alt=""-->
+                            <!--                            /></i>-->
+                            <!--                            </button>-->
                         </div>
                     </div>
                 </div>
@@ -470,5 +475,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/theme-toggler.js"></script>
 <script src="assets/js/card-section.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 </body>
 </html>

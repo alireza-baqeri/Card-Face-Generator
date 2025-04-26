@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="0456381015" level="application" />
     <orderEntry type="library" name="cd368f849e" level="application" />
+    <orderEntry type="library" name="html2canvas" level="application" />
   </component>
 </module>
