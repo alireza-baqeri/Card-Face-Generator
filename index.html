@@ -147,7 +147,7 @@
             </div>
         </div>
         <!-- ورودی کارت و شبا ⬇️-->
-        <form id="card-form">
+        <form type="submit" id="card-form">
             <div class="row justify-content-center mt-2 mb-5 p-2">
                 <div class="col-12 col-md-8 col-lg-6 input-form">
                     <div class="row g-3" dir="ltr">
@@ -245,16 +245,17 @@
                                 تغییر رنگ متن
                             </button>
                         </div>
+                        <!--                        ساخت ⬇️⬇️-->
                         <div class="col-6">
                             <button
-                                    type="submit"
+                                    type="button"
                                     class="w-100 btn btn-primary buildCardBtn"
                             >
                                 ساخت
                             </button>
                         </div>
                         <div class="col-8">
-                            <button onclick="downloadPNG()" class="w-100 button-85 p-3 mt-2 border cardDownload"
+                            <button class="w-100 button-85 p-3 mt-2 border cardDownload"
                                     role="button">
                                 دانلود تصویر<i class="i-img-container"><img class="download-icon"
                                                                             src="assets/icon/download.svg" alt=""/></i>
@@ -419,8 +420,8 @@
                         ></a>
                     </li>
                     <li class="col-2 d-flex justify-content-center">
-                        <a href="mailto:alirzabgh@gmail.com"
-                        ><i class="fa-solid fa-envelope"></i
+                        <a href="/cdn-cgi/l/email-protection#27464b4e555d4645404f67404a464e4b0944484a"><i
+                                class="fa-solid fa-envelope"></i
                         ></a>
                     </li>
                 </ul>
@@ -463,6 +464,7 @@
 <!-- cdn -->
 
 <!--font awesome cdn-->
+<!--<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>-->
 <script
         src="https://kit.fontawesome.com/cd368f849e.js"
         crossorigin="anonymous"
@@ -474,8 +476,8 @@
 <!-- js -->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/theme-toggler.js"></script>
-<script src="assets/js/card-section.js"></script>
+<script type="module" src="assets/js/card-section.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
+<script type="module" src="assets/js/downloadPNG.js"></script>
 </body>
 </html>

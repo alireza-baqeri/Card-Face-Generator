@@ -1,28 +1,5 @@
 "use strict";
 
-import html2canvas from 'html2canvas';
-
-
-// تابع دانلود تصویر
-function downloadPNG(e) {
-    e.preventDefault()
-    const element = document.querySelector(".card-container");
-    html2canvas(element, {
-        scale: 3, // افزایش کیفیت تصویر
-        useCORS: true, // برای لود درست تصاویر خارجی مثل لوگو بانک
-        backgroundColor: null, // پس‌زمینه شفاف
-        logging: false, // خاموش کردن لاگ‌های دیباگ
-        width: element.offsetWidth, // عرض دقیق المان
-        height: element.offsetHeight // ارتفاع دقیق المان
-    }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'card-image.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-    }).catch(error => {
-        console.error('خطا در دانلود تصویر:', error);
-    });
-}
 
 // import html2canvas from 'html2canvas';
 
@@ -328,3 +305,18 @@ resetBtn.addEventListener("click", function (e) {
     // ریست پیام‌های خطا
     resetErrorMessages();
 });
+
+function isCardFilled() {
+    const cardNumberInputOne = document.getElementById("card-digit-1").value.trim();
+    const cardNumberInputTwo = document.getElementById("card-digit-2").value.trim();
+    const cardNumberInputThree = document.getElementById("card-digit-3").value.trim();
+    const cardNumberInputFour = document.getElementById("card-digit-4").value.trim();
+    return (
+        cardNumberInputOne.length === 4 &&
+        cardNumberInputTwo.length === 4 &&
+        cardNumberInputThree.length === 4 &&
+        cardNumberInputFour.length === 4
+    );
+}
+
+window.isCardFilled = isCardFilled;
