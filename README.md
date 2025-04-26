@@ -1,5 +1,7 @@
 # Card-Face-Generator
 
+<img src="vid.gif" width="65%" alt="Project Structure">
+
 <div dir="ltr">
 A useful tool designed for individuals who need to share their card numbers with customers, but want to ensure the security of CVV2 and expiration date information.
 
