@@ -51,6 +51,7 @@ code for personal gain.
 </div>
 
 تصویر طرح اولیه پروژه در figma:
+<br>
 <img src="img_figma.png" width="25%" alt="figma">
 ### تصاویری از ظاهر پروژه
 
