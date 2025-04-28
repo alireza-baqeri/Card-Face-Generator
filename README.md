@@ -50,6 +50,8 @@ code for personal gain.
 (البته می‌تونید با clone کردن این پروژه روی WebStorm به صورت لوکال این فریم‌ورک‌ها و کتابخونه‌ها رو دانلود کنید)
 </div>
 
+تصویر طرح اولیه پروژه در figma:
+<img src="img_figma.png" width="75%" alt="figma">
 ### تصاویری از ظاهر پروژه
 
 <table>
