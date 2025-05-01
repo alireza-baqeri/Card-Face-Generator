@@ -35,7 +35,7 @@ code for personal gain.
    cd Card-Face-Generator
    ```
 3. یه سرور محلی راه بندازید (مثل Live Server در VS Code ).
-4. پروژه رو توی مرورگر باز کنید (مثل `http://localhost:8000`).
+4. پروژه رو توی مرورگر باز کنید (مثل `http://localhost:8000`) با live-server.
 
 <img src="vid.gif" width="25%" alt="Project Structure">
 
@@ -50,7 +50,7 @@ code for personal gain.
 (البته می‌تونید با clone کردن این پروژه روی WebStorm به صورت لوکال این فریم‌ورک‌ها و کتابخونه‌ها رو دانلود کنید)
 </div>
 
-تصویر طرح اولیه پروژه در figma:
+تصویر طرح اولیه پروژه در figma  UI:
 <br>
 <img src="img_figma.png" width="25%" alt="figma">
 ### تصاویری از ظاهر پروژه
