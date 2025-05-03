@@ -40,7 +40,7 @@ code for personal gain.
 <img src="vid.gif" width="25%" alt="Project Structure">
 
 
-### چیزایی که استفاده کردم
+### چیزایی که در این پروژه استفاده کردم
 
 - Bootstrap 5.3.5 (CSS و JS)
 - Font Awesome (برای آیکون‌ها)
